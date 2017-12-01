@@ -23,11 +23,11 @@ namespace IiPUlab3._2_battery_
         {
             InitializeComponent();
             defaultBlackoutTime = GetScreenTime();
-            myThread = new Thread(getBatteryStatus);
+            myThread = new Thread(GetBatteryStatus);
             myThread.Start();
         }
 
-        public void getBatteryStatus()
+        public void GetBatteryStatus()
         {
             PowerStatus pw = SystemInformation.PowerStatus;
             var prePowerLineStatus = pw.PowerLineStatus.ToString();
@@ -82,25 +82,5 @@ namespace IiPUlab3._2_battery_
             p.Start();
         }
 
-        private void BlackoutTimeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetDisplayBlackout(Int32.Parse(BlackoutTimeComboBox.SelectedItem.ToString()));
-        }
-
-        private void Battery_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            myThread.Abort();
-            SetDisplayBlackout(defaultBlackoutTime);
-        }
-
-        private void BatteryLifePercent_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BatteryLifeRemaining_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
