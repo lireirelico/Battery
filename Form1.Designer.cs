@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace IiPUlab3._2_battery_
 {
-    partial class Battery
+    partial class Battery : Form
     {
         /// <summary>
         /// Required designer variable.

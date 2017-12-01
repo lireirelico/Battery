@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 
 namespace IiPUlab3._2_battery_
 {
-    public partial class Battery : Form
+    public partial class Battery
     {
         Thread myThread;
         int defaultBlackoutTime;
