@@ -16,7 +16,7 @@ namespace IiPUlab3._2_battery_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Battery());
+            Application.Run(new BatteryInfo());
         }
 
     }

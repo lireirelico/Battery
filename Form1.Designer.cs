@@ -1,9 +1,6 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace IiPUlab3._2_battery_
+﻿namespace IiPUlab3._2_battery_
 {
-    partial class Battery : Form
+    partial class BatteryInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +41,7 @@ namespace IiPUlab3._2_battery_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 23);
+            this.label1.Location = new System.Drawing.Point(16, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 17);
@@ -54,26 +51,25 @@ namespace IiPUlab3._2_battery_
             // PowerLineStatus
             // 
             this.PowerLineStatus.Location = new System.Drawing.Point(20, 43);
-            this.PowerLineStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.PowerLineStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PowerLineStatus.Name = "PowerLineStatus";
             this.PowerLineStatus.ReadOnly = true;
-            this.PowerLineStatus.Size = new System.Drawing.Size(121, 22);
+            this.PowerLineStatus.Size = new System.Drawing.Size(341, 22);
             this.PowerLineStatus.TabIndex = 1;
             // 
             // BatteryLifePercent
             // 
-            this.BatteryLifePercent.Location = new System.Drawing.Point(180, 44);
-            this.BatteryLifePercent.Margin = new System.Windows.Forms.Padding(4);
+            this.BatteryLifePercent.Location = new System.Drawing.Point(20, 100);
+            this.BatteryLifePercent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BatteryLifePercent.Name = "BatteryLifePercent";
             this.BatteryLifePercent.ReadOnly = true;
-            this.BatteryLifePercent.Size = new System.Drawing.Size(121, 22);
+            this.BatteryLifePercent.Size = new System.Drawing.Size(341, 22);
             this.BatteryLifePercent.TabIndex = 3;
-            this.BatteryLifePercent.TextChanged += new System.EventHandler(this.BatteryLifePercent_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 23);
+            this.label2.Location = new System.Drawing.Point(16, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 17);
@@ -82,17 +78,17 @@ namespace IiPUlab3._2_battery_
             // 
             // BatteryLifeRemaining
             // 
-            this.BatteryLifeRemaining.Location = new System.Drawing.Point(20, 102);
-            this.BatteryLifeRemaining.Margin = new System.Windows.Forms.Padding(4);
+            this.BatteryLifeRemaining.Location = new System.Drawing.Point(20, 156);
+            this.BatteryLifeRemaining.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BatteryLifeRemaining.Name = "BatteryLifeRemaining";
             this.BatteryLifeRemaining.ReadOnly = true;
-            this.BatteryLifeRemaining.Size = new System.Drawing.Size(282, 22);
+            this.BatteryLifeRemaining.Size = new System.Drawing.Size(341, 22);
             this.BatteryLifeRemaining.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 81);
+            this.label3.Location = new System.Drawing.Point(16, 137);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 17);
@@ -118,27 +114,28 @@ namespace IiPUlab3._2_battery_
             "180",
             "240",
             "300"});
-            this.BlackoutTimeComboBox.Location = new System.Drawing.Point(98, 173);
-            this.BlackoutTimeComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.BlackoutTimeComboBox.Location = new System.Drawing.Point(20, 222);
+            this.BlackoutTimeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BlackoutTimeComboBox.Name = "BlackoutTimeComboBox";
-            this.BlackoutTimeComboBox.Size = new System.Drawing.Size(143, 24);
+            this.BlackoutTimeComboBox.Size = new System.Drawing.Size(341, 24);
             this.BlackoutTimeComboBox.TabIndex = 6;
+            this.BlackoutTimeComboBox.SelectedIndexChanged += new System.EventHandler(this.BlackoutTimeComboBox_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 152);
+            this.label4.Location = new System.Drawing.Point(20, 198);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "DisplayBlackoutTime";
             // 
-            // Battery
+            // BatteryInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 214);
+            this.ClientSize = new System.Drawing.Size(379, 287);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.BlackoutTimeComboBox);
             this.Controls.Add(this.BatteryLifeRemaining);
@@ -147,9 +144,11 @@ namespace IiPUlab3._2_battery_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PowerLineStatus);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Battery";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "BatteryInfo";
             this.Text = "Battery";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Battery_FormClosing);
+            this.Load += new System.EventHandler(this.BatteryInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,23 +164,6 @@ namespace IiPUlab3._2_battery_
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox BlackoutTimeComboBox;
         private System.Windows.Forms.Label label4;
-
-
-        private void BlackoutTimeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetDisplayBlackout(Int32.Parse(BlackoutTimeComboBox.SelectedItem.ToString()));
-        }
-
-        private void Battery_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            myThread.Abort();
-            SetDisplayBlackout(defaultBlackoutTime);
-        }
-
-        private void BatteryLifePercent_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
